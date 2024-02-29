@@ -1,0 +1,25 @@
+[package]
+name = "skal"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+
+[build-dependencies]
+winres = "0.1.12"
+
+[dependencies]
+chrono = "0.4.34"
+ctrlc = "3.4.2"
+futures = "0.3.30"
+winsafe = { git = "https://github.com/rodrigocfd/winsafe", features = ["gui"] }
+
+[dependencies.windows]
+version = "0.53"
+features = [
+  "ApplicationModel",
+  "Foundation_Collections",
+  "Storage_Streams",
+  "UI_Notifications",
+  "UI_Notifications_Management",
+  "Win32_Foundation",
+]
